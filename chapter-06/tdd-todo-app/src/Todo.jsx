@@ -51,7 +51,7 @@ const Todos = (props) => {
   return (
     <div className='list-item'  data-testid={props.id} >
       {props.content}
-      <button class="delete is-pulled-right" data-testid={`delete-todo-${props.id}-button`} onClick={() => { props.onDelete(props.id) }}></button>
+      <button className="delete is-pulled-right" data-testid={`delete-todo-${props.id}-button`} onClick={() => { props.onDelete(props.id) }}></button>
     </div>
   );
 }
