@@ -32,6 +32,27 @@ npm run cypress-init (Linux and MacOS)
 npm run cypress-init-windows (Windows OS)
 
 ```
+### Prerequisites
+
+The only requirement for this project is to have [Node.js](https://nodejs.org/en/) **version 18** installed on your machine. Refer to the [.node-version](./.node-version) file for the exact version.
+
+The only requirement for our application is to have [Node.js](https://nodejs.org/en/) **version 12** installed on your machine. Refer to the [.node-version](../cypress-realworld-app/.node-version) file for the exact version.
+
+#### switch npm
+
+```bash
+( using for cypress-realworld-app)
+nvm install 12.22.12
+nvm list
+nvm current 
+nvm use  12.22.12
+
+( using for chapter 10)
+nvm install 18.17.1
+nvm list
+nvm current 
+nvm use  18.17.1
+```
 
 ## 3. Running the application
 

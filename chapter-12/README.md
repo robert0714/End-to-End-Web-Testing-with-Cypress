@@ -32,7 +32,27 @@ npm run cypress-init (Linux and MacOS)
 npm run cypress-init-windows (Windows OS)
 
 ```
+### Prerequisites
 
+The only requirement for this project is to have [Node.js](https://nodejs.org/en/) **version 18** installed on your machine. Refer to the [.node-version](./.node-version) file for the exact version.
+
+The only requirement for our application is to have [Node.js](https://nodejs.org/en/) **version 12** installed on your machine. Refer to the [.node-version](../cypress-realworld-app/.node-version) file for the exact version.
+
+#### switch npm
+
+```bash
+( using for cypress-realworld-app)
+nvm install 12.22.12
+nvm list
+nvm current 
+nvm use  12.22.12
+
+( using for chapter 10)
+nvm install 18.17.1
+nvm list
+nvm current 
+nvm use  18.17.1
+```
 ## 3. Running the application
 
 This command will run our test application and start both the frontend and backend (API) and seed our low-db data. 
@@ -112,3 +132,18 @@ export APPLITOOLS_API_KEY=YOUR_API_KEY_HERE
 ```
 set APPLITOOLS_API_KEY=YOUR_API_KEY_HERE
 ```
+
+# Step by Step guide to migrating visual regression test project to the latest Percy SDK+
+## Step 1: Launch the Percy migration tool
+
+The **@percy/migrate** tool is useful in migrating your visual validation project to the latest Percy CLI. Use the below command to launch the migration tool.
+
+```bash
+npx @percy/migrate
+```
+
+## Step 2: Choose the best possible option in CLI
+
+When you launch the CLI migration tool, it automatically detects the Percy SDK, which you are using, such as **@percy/cypress**, @percy/puppeteer, @percy/webdriverio, etc. Typically below set of questions will be asked.
+
+Are you currently using **@percy/cypress** ? Answer **Yes**
