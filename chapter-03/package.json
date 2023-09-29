@@ -33,8 +33,5 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.3.0"
-  },
-  "dependencies": {
-    "npm-check-updates": "^16.14.4"
-  }
+  } 
 }
