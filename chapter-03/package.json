@@ -9,27 +9,32 @@
     "cypress:chrome": "cypress run --env TransferProtocol=http --browser chrome",
     "cypress:firefox": "cypress run --env TransferProtocol=http --browser firefox",
     "cypress:tablet-view": "cypress run --env TransferProtocol=http --config viewportHeight=763,viewportWidth=700 --browser chrome",
-    "cypress:run:secondary-configuraton": "cypress run --env TransferProtocol=http --browser chrome --config-file config/cypress-config.json",
+    "cypress:run:secondary-configuration": "cypress run --env TransferProtocol=http --browser chrome --config-file config/cypress-config.config.js",
     "cypress:electron:headed": "cypress run --env TransferProtocol=http --headed",
     "cypress:firefox:headless": "cypress run --env TransferProtocol=http --browser firefox --headless",
     "cypress:chrome:headless": "cypress run --env TransferProtocol=http --browser chrome --headless",
-    "cypress:integration-v2": "cypress run --env TransferProtocol=http --spec 'cypress/integration/integration-v2/**/'",
-    "cypress:integration-v2:todo-app": "cypress run --env TransferProtocol=http --spec 'cypress/integration/integration-v2/todo-app.spec.js'",
-    "cypress:run:debugger": "DEBUG=cypress:* cypress run --env TransferProtocol=http",
+    "cypress:integration-v2": "cypress run --env TransferProtocol=http --spec 'cypress/e2e/integration-v2/**/'",
+    "cypress:integration-v2:todo-app": "cypress run --env TransferProtocol=http --spec 'cypress/e2e/integration-v2/todo-app.cy.js'",    
+    "cypress:run:debugger": "DEBUG=cypress:* cypress run --env TransferProtocol=http", 
+    "_comment": "Print DEBUG logs see https://docs.cypress.io/guides/references/troubleshooting#Print-DEBUG-logs" ,
     "cypress:run:changed-port": "cypress run --env TransferProtocol=http --port 3004",
     "cypress:open": "cypress open --env TransferProtocol=http",
     "cypress:chromium": "cypress open --browser /usr/bin/chromium",
     "cypress:open:tablet-view": "cypress open --env TransferProtocol=http --config viewportHeight=763,viewportWidth=700",
-    "cypress:open:secondary-configuraton": "cypress open --env TransferProtocol=http --config-file config/cypress-config.json",
+    "cypress:open:secondary-configuration": "cypress open --env TransferProtocol=http --config-file config/cypress-config.config.js",
     "cypress:project:v3": "cypress open --env TransferProtocol=http --project  cypress/todo-app-v3/ ",
     "cypress:open:changed-port": "cypress open --env TransferProtocol=http --port 3004",
     "cypress:open:debugger": "DEBUG=cypress:* cypress open --env TransferProtocol=http",
+    "_comment": "Print DEBUG logs see https://docs.cypress.io/guides/references/troubleshooting#Print-DEBUG-logs" ,
     "cypress:open:server-debugger": "DEBUG=cypress:server:* cypress open --env TransferProtocol=http"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.5.3"
+    "cypress": "^13.3.0"
+  },
+  "dependencies": {
+    "npm-check-updates": "^16.14.4"
   }
 }
