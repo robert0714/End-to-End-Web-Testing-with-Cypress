@@ -1,3 +1,6 @@
+
+
+
 # End-to-End Web Testing with Cypress
 
 <a href="https://www.packtpub.com/product/end-to-end-web-testing-with-cypress/9781839213854?utm_source=github&utm_medium=repository&utm_campaign=9781839213854"><img src="https://github.com/PacktPublishing/End-to-End-Web-Testing-with-Cypress/blob/master/Cover%20Image.png?raw=true" alt="End-to-End Web Testing with Cypress" height="256px" align="right"></a>
@@ -63,3 +66,7 @@ is a software engineer with a specialization in automation testing and tools tha
 
 
 
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781839213854">https://packt.link/free-ebook/9781839213854 </a> </p>
