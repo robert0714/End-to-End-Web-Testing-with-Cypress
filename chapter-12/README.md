@@ -133,8 +133,37 @@ export APPLITOOLS_API_KEY=YOUR_API_KEY_HERE
 set APPLITOOLS_API_KEY=YOUR_API_KEY_HERE
 ```
 
-# Step by Step guide to migrating visual regression test project to the latest Percy SDK+
-## Step 1: Launch the Percy migration tool
+
+# Visual Testing
+## Official Documentation
+* https://docs.cypress.io/guides/tooling/visual-testing
+* https://docs.cypress.io/plugins#visual-testing
+* Cypress plugins ?
+  * Cypress Configureation(Legacy) : https://docs.cypress.io/guides/references/legacy-configuration#Plugins
+  * [The **setupNodeEvents**  function](https://docs.cypress.io/guides/references/configuration#setupNodeEvents) was added in Cypress version ``10.0.0`` to replace the deprecated [plugins file](https://docs.cypress.io/guides/references/legacy-configuration#Plugins).
+
+
+### Percy (@percy/cypress)
+* reference: https://docs.percy.io/docs/cypress
+* sample code: https://github.com/percy/example-percy-cypress
+
+#### Setting up Percy
+* Setting up Percy is not complicated and involves the following steps:
+
+1. Create an account with BrowserStack (https://www.browserstack.com/).
+2. Verify your BrowserStack email address.
+3.  Create an organization in the Browserstack dashboard.
+4. Log into the Percy dashboard using your BrowserStack account.
+5. Create a project on the Percy dashboard.
+6. Configure Percy on your local project using the instructions on the Percy website (https://docs.percy.io/docs/cypress).
+7. Add a **Percy TOKEN** to your local machine as an environment variable.
+8. Voila! You are now ready to write your tests!
+
+Once steps 1 - 4 have been completed, Percy provides you with a **TOKEN** that ⚠ **you must add to your machine environment variable before executing your tests**. You can visit the Percy documentation (https://docs.percy.io/docs/cypress) for more information on how to set up Percy using Cypress.
+
+
+####  Step by Step guide to migrating visual regression test project to the latest Percy SDK+
+##### Step 1: Launch the Percy migration tool
 
 The **@percy/migrate** tool is useful in migrating your visual validation project to the latest Percy CLI. Use the below command to launch the migration tool.
 
@@ -142,8 +171,25 @@ The **@percy/migrate** tool is useful in migrating your visual validation projec
 npx @percy/migrate
 ```
 
-## Step 2: Choose the best possible option in CLI
+##### Step 2: Choose the best possible option in CLI
 
 When you launch the CLI migration tool, it automatically detects the Percy SDK, which you are using, such as **@percy/cypress**, @percy/puppeteer, @percy/webdriverio, etc. Typically below set of questions will be asked.
 
 Are you currently using **@percy/cypress** ? Answer **Yes**
+
+
+
+
+### Applitools (@applitools/eyes-cypress)
+* reference: https://applitools.com/tutorials/quickstart/web/cypress
+* sample code: https://github.com/applitools/example-cypress-javascript
+#### Setting up Applitools
+* Just like Percy, the Applitools Eyes SDK is relatively easy to set up with Cypress. This can be achieved by performing the following steps:
+
+1. Create an account with Applitools (https://auth.applitools.com/users/register).
+2. Verify your Applitools email address.
+3. Navigate to the Applitools dashboard to obtain the API key.
+4. Configure Applitools on your local project.
+5. Add the Applitools **APPLITOOLS_API_KEY** to your local machine as an environment variable.
+6. Party!
+Once steps 1 and 2 have been completed, Applitools provides you with an **APPLITOOLS_API_KEY**, similar to the Percy TOKEN, that  ⚠ **you must add as an environment variable to your machine before executing your tests**. You can visit the Applitools and Cypress documentation (https://applitools.com/tutorials/cypress.html) to find out more about how to set up the Applitools Eyes SDK using Cypress.
